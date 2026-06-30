@@ -1,3 +1,4 @@
+#decision tree code:
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
@@ -27,3 +28,13 @@ from sklearn.tree import export_text
 
 tree_rules = export_text(dt_model, feature_names = list(X.columns))
 print(tree_rules)
+
+
+#measure error for decision tree:
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+
+dt_mae = mean_absolute_error(y_test, dt_predictions)
+dt_mse = mean_squared_error(y_test, dt_predictions)
+
+print("Decision Tree MAE:", dt_mae)
+print("Decision Tree MSE:", dt_mse)
