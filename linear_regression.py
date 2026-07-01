@@ -11,7 +11,7 @@ from sklearn.pipeline import Pipeline
 # This program trains a linear regression model to predict laptop prices.
 
 # Load the dataset
-df = pd.read_csv("laptop_data.csv")
+df = pd.read_csv("data.csv")
 
 # Display basic dataset information
 print("Dataset loaded successfully.")
@@ -19,13 +19,13 @@ print("Rows and columns:", df.shape)
 print(df.head())
 
 # Target variable
-y = df["Price"]
+y = df["price"]
 
 # Features used for prediction
-X = df.drop("Price", axis=1)
+X = df.drop("price", axis=1)
 
 # Automatically detect categorical and numeric columns
-categorical_features = X.select_dtypes(include=["object"]).columns
+categorical_features = X.select_dtypes(include=["object", "string"]).columns
 numeric_features = X.select_dtypes(include=["int64", "float64"]).columns
 
 # Preprocessing:
