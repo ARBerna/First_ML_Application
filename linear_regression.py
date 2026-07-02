@@ -1,3 +1,4 @@
+#decision tree code:
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -66,3 +67,6 @@ print("-------------------------")
 print("Mean Squared Error:", mse)
 print("Root Mean Squared Error:", rmse)
 print("R2 Score:", r2)
+
+
+#measuring error for linear regression:

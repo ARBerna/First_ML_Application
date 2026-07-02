@@ -38,3 +38,8 @@ dt_mse = mean_squared_error(y_test, dt_predictions)
 
 print("Decision Tree MAE:", dt_mae)
 print("Decision Tree MSE:", dt_mse)
+
+#Save Decision Tree
+import joblib
+joblib.dump(dt_model, "laptop_price_model.pkl")
+print("Model saved successfully")
